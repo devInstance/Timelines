@@ -1,0 +1,14 @@
+﻿@page "/settings"
+
+<h2>Select Language</h2>
+
+<div class="row mb-3">
+    <div class="col">
+        <select class="form-control" @bind="Culture" style="width:300px; margin-left:10px;">
+            @foreach (var language in SupportedLanguages)
+            {
+                <option value="@language.Culture"><span>@language.FlagName</span> <span>@language.Culture.DisplayName</span></option>
+            }
+        </select>
+    </div>
+</div>

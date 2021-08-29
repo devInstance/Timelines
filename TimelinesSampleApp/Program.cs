@@ -1,5 +1,6 @@
 using DevInstance.LogScope.Extensions;
 using DevInstance.LogScope.Formatters;
+using DevInstance.Timeline.Sample.Extensions;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -19,7 +20,11 @@ namespace DevInstance.Timeline.Sample.TimelineSampleApp
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-            await builder.Build().RunAsync();
+            var host = builder.Build();
+
+            await host.SetDefaultCultureAsync();
+
+            await host.RunAsync();
         }
     }
 }

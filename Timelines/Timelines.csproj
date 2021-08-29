@@ -8,15 +8,20 @@
     <Company>DevInstance</Company>
     <Product>Timelines</Product>
     <Copyright>Copyright 2021 DevInstance</Copyright>
-    <AssemblyVersion>0.0.0.1</AssemblyVersion>
-    <FileVersion>0.0.0.1</FileVersion>
-    <Version>0.0.1</Version>
+    <AssemblyVersion>0.0.0.2</AssemblyVersion>
+    <FileVersion>0.0.0.2</FileVersion>
+    <Version>0.0.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Timelines is a chart library to help visualizing timelines and report for nocrast.com.  This is still a working in progress and early version.</Description>
     <RepositoryUrl>https://github.com/devInstance/Timelines</RepositoryUrl>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="compilerconfig.json" />
   </ItemGroup>
 
